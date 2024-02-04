@@ -1,0 +1,57 @@
+### Login
+
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "username": "john",
+    "password": "john"
+}
+
+### List products
+
+GET http://localhost:3000/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiam9obiIsImlhdCI6MTcwNzAxNzMyNiwiZXhwIjoxNzA3MTAzNzI2fQ.XijlmtmHMTiBfItZ7CzKZvkm-haxtyw40wxtjBgRhrY
+
+
+###
+
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+    "name": "Product 1",
+    "description": "Product 1 description",
+    "image_url": "https://test.test/img.jpg",
+    "price": 100
+}
+
+###
+GET http://localhost:3000/orders
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiam9obiIsImlhdCI6MTcwNzAxNzMyNiwiZXhwIjoxNzA3MTAzNzI2fQ.XijlmtmHMTiBfItZ7CzKZvkm-haxtyw40wxtjBgRhrY
+
+### Get One
+GET http://localhost:3000/orders/cc56d396-36f6-4142-840c-897378209113
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiam9obiIsImlhdCI6MTcwNzAxNzMyNiwiZXhwIjoxNzA3MTAzNzI2fQ.XijlmtmHMTiBfItZ7CzKZvkm-haxtyw40wxtjBgRhrY
+
+
+###
+
+POST http://localhost:3000/orders
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiam9obiIsImlhdCI6MTcwNzAxNzMyNiwiZXhwIjoxNzA3MTAzNzI2fQ.XijlmtmHMTiBfItZ7CzKZvkm-haxtyw40wxtjBgRhrY
+
+{
+    "items": [
+        {
+            "product_id": "1cb53ac4-3b35-4cac-a68f-eb145c380001",
+            "quantity": 2
+        },
+        {
+            "product_id": "1cb53ac4-3b35-4cac-a68f-eb145c380003",
+            "quantity": 6
+        }
+    ],
+    "card_hash": "1and3"
+}
+
