@@ -23,6 +23,8 @@ export class OrdersService {
     });
 
     if (products.length !== uniqueProductIds.length) {
+      console.log(products)
+      console.log(uniqueProductIds)
       throw new Error(
         `Any of the products do not exist. Products sent ${productIds}, products found ${products.map(product => product.id)}`
       );
@@ -65,5 +67,21 @@ export class OrdersService {
       id,
       client_id
     });
+  }
+
+  async pay(id: string) {
+    const order = await this.orderRepo.findOneByOrFail({id});
+    order.pay();
+
+    await this.orderRepo.save(order);
+    return order;
+  }
+
+  async fail(id: string) {
+    const order = await this.orderRepo.findOneByOrFail({id});
+    order.fail();
+
+    await this.orderRepo.save(order);
+    return order;
   }
 }

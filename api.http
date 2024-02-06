@@ -11,35 +11,37 @@ Content-Type: application/json
 ### List products
 
 GET http://localhost:3000/products
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiam9obiIsImlhdCI6MTcwNzAxNzMyNiwiZXhwIjoxNzA3MTAzNzI2fQ.XijlmtmHMTiBfItZ7CzKZvkm-haxtyw40wxtjBgRhrY
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiam9obiIsImlhdCI6MTcwNzEyODI1NCwiZXhwIjoxNzA3MjE0NjU0fQ.NkMx7Xh0Uj9i18XAIB2cfexau7Tt_JQmfSO6z2LxQ30
 
 
 ###
 
 POST http://localhost:3000/products
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiam9obiIsImlhdCI6MTcwNzEyODI1NCwiZXhwIjoxNzA3MjE0NjU0fQ.NkMx7Xh0Uj9i18XAIB2cfexau7Tt_JQmfSO6z2LxQ30
 
 {
-    "name": "Product 1",
-    "description": "Product 1 description",
-    "image_url": "https://test.test/img.jpg",
-    "price": 100
+    "id": "c488eb5c-9db6-47d0-ae46-f1daa8pr1004",
+    "name": "Relogio 04",
+    "description": "Relogio 04 description",
+    "image_url": "https://cdn.ttgtmedia.com/rms/onlineimages/hp_elitebook.jpg",
+    "price": 101
 }
 
 ###
 GET http://localhost:3000/orders
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiam9obiIsImlhdCI6MTcwNzAxNzMyNiwiZXhwIjoxNzA3MTAzNzI2fQ.XijlmtmHMTiBfItZ7CzKZvkm-haxtyw40wxtjBgRhrY
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiam9obiIsImlhdCI6MTcwNzEyODI1NCwiZXhwIjoxNzA3MjE0NjU0fQ.NkMx7Xh0Uj9i18XAIB2cfexau7Tt_JQmfSO6z2LxQ30
 
 ### Get One
-GET http://localhost:3000/orders/cc56d396-36f6-4142-840c-897378209113
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiam9obiIsImlhdCI6MTcwNzAxNzMyNiwiZXhwIjoxNzA3MTAzNzI2fQ.XijlmtmHMTiBfItZ7CzKZvkm-haxtyw40wxtjBgRhrY
+GET http://localhost:3000/orders/8a80c98f-6cac-4c61-914d-9af98c02793d
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiam9obiIsImlhdCI6MTcwNzEyODI1NCwiZXhwIjoxNzA3MjE0NjU0fQ.NkMx7Xh0Uj9i18XAIB2cfexau7Tt_JQmfSO6z2LxQ30
 
 
 ###
 
 POST http://localhost:3000/orders
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiam9obiIsImlhdCI6MTcwNzAxNzMyNiwiZXhwIjoxNzA3MTAzNzI2fQ.XijlmtmHMTiBfItZ7CzKZvkm-haxtyw40wxtjBgRhrY
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiam9obiIsImlhdCI6MTcwNzEyODI1NCwiZXhwIjoxNzA3MjE0NjU0fQ.NkMx7Xh0Uj9i18XAIB2cfexau7Tt_JQmfSO6z2LxQ30
 
 {
     "items": [
